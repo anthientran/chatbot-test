@@ -13,7 +13,7 @@ const bot = new FBBotFramework({
 app.use('/webhook', bot.middleware());
 
 bot.on('message', (userId, message) => {
-    bot.sendTextMessageu(userId, 'Echo message: ' + message);
+    bot.sendTextMessage(userId, 'Echo message: ' + message);
 })
     ;
 app.get('/', (req, res) => {
