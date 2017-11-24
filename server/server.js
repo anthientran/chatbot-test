@@ -20,10 +20,6 @@ app.get('/', (req, res) => {
     res.send('Hello world');
 });
 
-app.get('/webhook', () => {
-    res.send('GET /webhooks');
-});
-
 app.post('/webhook', (req, res) => {
 
     // Parse the request body from the POST
