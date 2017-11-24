@@ -13,6 +13,7 @@ const bot = new FBBotFramework({
 app.use('/webhook', bot.middleware());
 
 bot.on('message', (userId, message) => {
+    console.log('SenderID: ' + userId);
     bot.sendTextMessage(userId, 'Echo message: ' + message);
 })
     ;
@@ -20,7 +21,7 @@ app.get('/', (req, res) => {
     res.send('Hello world');
 });
 
-app.post('/webhook', (req, res) => {
+/* app.post('/webhook', (req, res) => {
 
     // Parse the request body from the POST
     let body = req.body;
@@ -52,7 +53,7 @@ app.post('/webhook', (req, res) => {
     }
 
 });
-
+ */
 function handleMessage(sender_psid, received_message) {
 
 }
